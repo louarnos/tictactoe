@@ -15,42 +15,20 @@ body {
   width: 100%;
 }
 
+h3 {
+  display: none;
+}
+
 legend {
   font-size: 2em;
 }
 
-#sign-in-p1 {
-  float: left;
-  font-family: monospace;
-  font-size: .7em;
-  width: auto;
-}
-
-#sign-out-p1 {
-  float: left;
-  font-family: monospace;
-  font-size: .7em;
-  padding-left: 1.5%;
-  width: auto;
-}
-
-#sign-in-p2 {
-  float: right;
-  font-family: monospace;
-  font-size: .7em;
-  width: auto;
-}
-
-#sign-out-p2 {
-  float: right;
-  font-family: monospace;
-  font-size: .7em;
-  padding-left: 1.5%;
-  width: auto;
-}
-
 .auth {
+  float: left;
+  font-family: monospace;
+  font-size: .7em;
   padding-bottom: 10%;
+  width: auto;
 }
 
 .title {
@@ -60,15 +38,15 @@ legend {
   clear: both;
   font-family: monospace;
   font-size: 4em;
-  margin-left: 31.5%;
-  margin-right: 31.5%;
+  margin-left: 35%;
+  margin-right: 35%;
   // padding-top: 5%;
   // width: auto;
 }
 
 .page {
   clear: both;
-  margin: 0;
+  margin: auto;
 }
 
 

@@ -2,58 +2,73 @@
 <html>
     <head>
       <title>Tic [x] Tac [o] Toe</title>
-
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class = "auth">
-        <form id="sign-in-p1">
-          <fieldset>
-            <legend>Player 1 Sign In!</legend>
-            <input type="text" name="credentials[email]" value="" placeholder="email">
-            <input type="password" name="credentials[password]" value="" placeholder="password">
-            <input type="submit" name="submit" value="Sign in!">
-          </fieldset>
-        </form>
-        <form id="sign-out-p1">
-          <fieldset>
-            <legend> Player 1 Sign Out!</legend>
-            <input type="submit" name="submit" value="Sign out!">
-          </fieldset>
-        </form>
-        <form id="sign-out-p2">
-          <fieldset>
-            <legend> Player 2 Sign Out!</legend>
-            <input type="submit" name="submit" value="Sign out!">
-          </fieldset>
-        </form>
-        <form id="sign-in-p2">
-          <fieldset>
-            <legend>Player 2 Sign In!</legend>
-            <input type="text" name="credentials[email]" value="" placeholder="email">
-            <input type="password" name="credentials[password]" value="" placeholder="password">
-            <input type="submit" name="submit" value="Sign in!">
-          </fieldset>
-        </form>
-      </div>
       <div class ="page">
+        <!-- LOGIN FIELDS -->
+        <div class = "auth">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password">
+              <input type="submit" name="submit" value="Sign up!">
+            </fieldset>
+          </form>
+          <form id="sign-in-p1">
+            <fieldset>
+              <legend>Sign In Player 1!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+          <form id="sign-in-p2">
+            <fieldset>
+              <legend>Sign In Player 2!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+          <form id="sign-out-p1">
+            <fieldset>
+              <legend>Sign Out Player 1!</legend>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+          <form id="sign-out-p2">
+            <fieldset>
+              <legend>Sign Out Player 2!</legend>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+        </div>
+
+        <!-- TITLE  -->
         <h1 class ="title">Tic Tac Toe</h1>
+
+        <h3 class ="log-in-prompt">LOG-IN IF YOU WANNA PLAY!!</h3>
+
+        <!-- BOARD  -->
         <div class ="board">
           <div class ="row1">
-            <div class ="box1 box"><p>x</p></div>
-            <div class ="box2 box"><p>x</p></div>
-            <div class ="box3 box"><p>x</p></div>
+            <div class ="box1 box"><p></p></div>
+            <div class ="box2 box"><p></p></div>
+            <div class ="box3 box"><p></p></div>
           </div>
           <div class ="row2">
-            <div class ="box4 box"></div>
-            <div class ="box5 box"></div>
-            <div class ="box6 box"></div>
+            <div class ="box4 box"><p></p></div>
+            <div class ="box5 box"><p></p></div>
+            <div class ="box6 box"><p></p></div>
           </div>
           <div class ="row3">
-            <div class ="box7 box"></div>
-            <div class ="box8 box"></div>
-            <div class ="box9 box"></div>
+            <div class ="box7 box"><p></p></div>
+            <div class ="box8 box"><p></p></div>
+            <div class ="box9 box"><p></p></div>
           </div>
         </div>
       </div>
