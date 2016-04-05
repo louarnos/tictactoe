@@ -1,5 +1,8 @@
 'use strict';
 
+const createGame = require('./createGame.js')
+const ui = require('./ui.js');
+
 let playerOnesTurn = true;
 
 const addHandlers = () => {
@@ -9,7 +12,13 @@ const addHandlers = () => {
       $('h3').show('slow');
     }
   });
+  $('#start-game').on('submit', function(event){
+    event.preventDefault();
+    debugger;
+    createGame.createGame(ui.gameCreationSuccess,ui.gameCreationFailure);
+  });
 }
+
 
 module.exports = {
   addHandlers,

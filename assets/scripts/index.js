@@ -7,11 +7,11 @@
 const authEvents = require('./auth/events.js');
 const user1 = require('./auth/user1.js');
 const gameEvents = require('./game/events.js')
+const ui = require('./game/ui.js')
 
 // On document ready
 $(() => {
-  gameEvents.addHandlers();
   authEvents.addHandlers();
-
+  gameEvents.addHandlers();
 
 });

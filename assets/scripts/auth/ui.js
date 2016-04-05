@@ -11,7 +11,6 @@ const success = (data) => {
 const signInSuccessP1= (data) => {
   user1.user = data.user;
   console.log(user1);
-  console.log(data);
 };
 
 const signInSuccessP2= (data) => {
