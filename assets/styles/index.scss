@@ -15,24 +15,37 @@ body {
   width: 100%;
 }
 
+legend {
+  font-size: 2em;
+}
 
 #sign-in-p1 {
   float: left;
+  font-family: monospace;
+  font-size: .7em;
   width: auto;
 }
 
 #sign-out-p1 {
   float: left;
+  font-family: monospace;
+  font-size: .7em;
+  padding-left: 1.5%;
   width: auto;
 }
 
 #sign-in-p2 {
   float: right;
+  font-family: monospace;
+  font-size: .7em;
   width: auto;
 }
 
 #sign-out-p2 {
   float: right;
+  font-family: monospace;
+  font-size: .7em;
+  padding-left: 1.5%;
   width: auto;
 }
 
@@ -46,48 +59,54 @@ body {
   border-radius: 25px;
   clear: both;
   font-family: monospace;
-  font-size: 5em;
+  font-size: 4em;
   margin-left: 31.5%;
   margin-right: 31.5%;
   // padding-top: 5%;
-  width: auto;
+  // width: auto;
 }
 
 .page {
   clear: both;
+  margin: 0;
 }
 
 
 .board {
   border: 0;
-  height: 420px;
-  width: 420px;
+  height: 450px;
+  width: 33%;
   margin-top: 50px;
   margin-left: 33.5%;
 }
 
 .box {
+  box-sizing: border-box;
   border: 3px black;
   border-style: inset;
   width: 33%;
   height: auto;
 }
 
+p {
+  font-size: 8em;
+}
+
 .row1 {
   display: flex;
-  height: 140px;
+  height: 33%;
   width: 100%;
 }
 
 .row2 {
   display: flex;
-  height: 140px;
+  height: 33%;
   width: 100%;
 }
 
 .row3 {
   display: flex;
-  height: 140px;
+  height: 33%;
   width: 100%;
 }
 
