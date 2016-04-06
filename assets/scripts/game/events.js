@@ -8,10 +8,10 @@ const play = require('./game-play.js');
 const addHandlers = () => {
   $('.box').on('click', function (event) {
     event.preventDefault();
-    if (user1.user) {
+    if (user1.user && (!$(this).hasClass('marked'))) {
       let $currentBox = $(this);
       play.play($currentBox);
-    }else {
+    }else if (!user1.user) {
       $('h3').css('visibility', 'visible');
       setTimeout(function () {
         $('h3').css('visibility', 'hidden');
