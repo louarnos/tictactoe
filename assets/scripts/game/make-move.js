@@ -7,7 +7,7 @@ const makeMoveX = (currentBox) => {
   game.game.game.cells[currentBox.data('square')] = 'x';
   game.playerOnesTurn = false;
   game.moveCount += 1;
-  debugger;
+  console.log(game.game.game.cells);
 };
 
 const makeMoveO = (currentBox) => {
@@ -15,6 +15,7 @@ const makeMoveO = (currentBox) => {
   game.game.game.cells[currentBox.data('square')] = 'o';
   game.playerOnesTurn = true;
   game.moveCount += 1;
+  console.log(game.game.game.cells);
 };
 
 module.exports = {

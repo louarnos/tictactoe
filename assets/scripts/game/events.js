@@ -9,7 +9,8 @@ const addHandlers = () => {
   $('.box').on('click', function (event) {
     event.preventDefault();
     if (user1.user) {
-      play.play();
+      let $currentBox = $(this);
+      play.play($currentBox);
     }else {
       $('h3').css('visibility', 'visible');
       setTimeout(function () {
