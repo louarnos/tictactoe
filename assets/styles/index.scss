@@ -16,11 +16,15 @@ body {
 }
 
 h3 {
-  display: none;
+  font-family: fantasy;
+  visibility: hidden;
+  margin-left: 38%;
+  margin-right: 38%;
 }
 
 legend {
   font-size: 2em;
+
 }
 
 .auth {
@@ -37,7 +41,7 @@ legend {
   border-radius: 25px;
   clear: both;
   font-family: monospace;
-  font-size: 4em;
+  font-size: 4.5em;
   margin-left: 35%;
   margin-right: 35%;
   // padding-top: 5%;

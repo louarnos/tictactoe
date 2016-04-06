@@ -2,19 +2,23 @@
 
 const createGame = require('./createGame.js')
 const ui = require('./ui.js');
+const user1 = require('../auth/user1.js')
 
-let playerOnesTurn = true;
 
 const addHandlers = () => {
   $('.box').on('click', function(event){
-    if(true){
+    event.preventDefault();
+    if(user1.user){
+      console.log('User 1 Exists');
     }else{
-      $('h3').show('slow');
+      $('h3').css('visibility', 'visible');
+      setTimeout(function() {
+        $('h3').css('visibility', 'hidden');
+        }, 1000);
     }
   });
   $('#start-game').on('submit', function(event){
     event.preventDefault();
-    debugger;
     createGame.createGame(ui.gameCreationSuccess,ui.gameCreationFailure);
   });
 }

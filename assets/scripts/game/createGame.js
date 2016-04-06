@@ -3,7 +3,6 @@
 const user1 = require('../auth/user1.js')
 
 const createGame = (success,failure) =>{
-  debugger;
   $.ajax({
     method: "POST",
     url: 'http://tic-tac-toe.wdibos.com/' + 'games',
