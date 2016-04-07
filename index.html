@@ -9,7 +9,35 @@
       <div class ="page">
         <!-- LOGIN FIELDS -->
         <div class = "auth">
-          <form id="sign-up">
+          <form id="sign-in-p1" class="sign-in-p1 p1">
+            <fieldset>
+              <legend>Sign In Player 1!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+          <form id="sign-out-p1" class="sign-out-p1 p1">
+            <fieldset>
+              <legend>Sign Out Player 1!</legend>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+          <form id="sign-in-p2" class="sign-in-p2 p2">
+            <fieldset>
+              <legend>Sign In Player 2!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="submit" name="submit" value="Sign in!">
+            </fieldset>
+          </form>
+          <form id="sign-out-p2" class="sign-out-p2 p2">
+            <fieldset>
+              <legend>Sign Out Player 2!</legend>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+          <form id="sign-up" class="sign-up">
             <fieldset>
               <legend>Sign up!</legend>
               <input type="text" name="credentials[email]" value="" placeholder="email">
@@ -18,35 +46,7 @@
               <input type="submit" name="submit" value="Sign up!">
             </fieldset>
           </form>
-          <form id="sign-in-p1">
-            <fieldset>
-              <legend>Sign In Player 1!</legend>
-              <input type="text" name="credentials[email]" value="" placeholder="email">
-              <input type="password" name="credentials[password]" value="" placeholder="password">
-              <input type="submit" name="submit" value="Sign in!">
-            </fieldset>
-          </form>
-          <form id="sign-in-p2">
-            <fieldset>
-              <legend>Sign In Player 2!</legend>
-              <input type="text" name="credentials[email]" value="" placeholder="email">
-              <input type="password" name="credentials[password]" value="" placeholder="password">
-              <input type="submit" name="submit" value="Sign in!">
-            </fieldset>
-          </form>
-          <form id="sign-out-p1">
-            <fieldset>
-              <legend>Sign Out Player 1!</legend>
-              <input type="submit" name="submit" value="Sign out!">
-            </fieldset>
-          </form>
-          <form id="sign-out-p2">
-            <fieldset>
-              <legend>Sign Out Player 2!</legend>
-              <input type="submit" name="submit" value="Sign out!">
-            </fieldset>
-          </form>
-          <form id="change-pw-1">
+          <form id="change-pw-1" class="change-pw-1 p1">
             <fieldset>
               <legend>Change Password Player 1!</legend>
               <input type="text" name="credentials[email]" value="" placeholder="email">
@@ -55,7 +55,7 @@
               <input type="submit" name="submit" value="Change Password!">
             </fieldset>
           </form>
-          <form id="change-pw-2">
+          <form id="change-pw-2" class="change-pw-2 p2">
             <fieldset>
               <legend>Change Password Player 2!</legend>
               <input type="text" name="credentials[email]" value="" placeholder="email">

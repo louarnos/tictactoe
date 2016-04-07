@@ -13,11 +13,15 @@ const addHandlers = () => {
     let data = getFormFields(this);
     event.preventDefault();
     authApi.signIn(authUi.signInSuccessP1, authUi.failure, data);
+    $('.sign-in-p1').css('display', 'none');
+    $('.sign-out-p1').css('display', 'block');
   });
   $('#sign-in-p2').on('submit', function (event) {
     let data = getFormFields(this);
     event.preventDefault();
     authApi.signIn(authUi.signInSuccessP2, authUi.failure, data);
+    $('.sign-in-p2').css('display', 'none');
+    $('.sign-out-p2').css('display', 'block');
   });
   $('#sign-out-p1').on('submit', function (event) {
     let data = getFormFields(this);
