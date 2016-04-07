@@ -35,8 +35,10 @@ const findWinOrTie = function () {
   }
 
   if (win) {
+    $('.title').text(' ' + winner + ' Wins!!!');
     console.log(winner + ' wins!!!');
   }else if (tie) {
+    $('.title').text('Its a Tie!!!');
     console.log('Its a tie!!!');
   }
 

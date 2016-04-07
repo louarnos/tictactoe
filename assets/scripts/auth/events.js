@@ -1,8 +1,7 @@
-'use strict'
+'use strict';
 
 const authApi = require('./api.js');
 const authUi = require('./ui.js');
-
 
 const addHandlers = () => {
   $('#sign-up').on('submit', function (event) {
@@ -29,6 +28,18 @@ const addHandlers = () => {
     let data = getFormFields(this);
     event.preventDefault();
     authApi.signOutP2(authUi.signOutSuccessP2, authUi.failure, data);
+  });
+  $('#change-pw-1').on('submit', function (event) {
+    let data = getFormFields(this);
+    console.log(data.password.old,data.password.new);
+    event.preventDefault();
+    authApi.changePw1(authUi.changePw1Success, authUi.changePw1Failure, data);
+  });
+  $('#change-pw-2').on('submit', function (event) {
+    let data = getFormFields(this);
+    console.log(data.password.old, data.password.new);
+    event.preventDefault();
+    authApi.changePw2(authUi.changePw2Success, authUi.changePw2Failure, data);
   });
 };
 

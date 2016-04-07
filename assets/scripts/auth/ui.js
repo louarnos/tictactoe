@@ -1,36 +1,51 @@
 'use strict';
 
-const app = require('./app-data.js');
 const user1 = require('./user1.js');
 const user2 = require('./user2.js');
 
 const success = (data) => {
-  console.log("YOU DID IT!!!!" , data);
+  console.log('YOU DID IT!!!!', data);
 };
 
-const signInSuccessP1= (data) => {
+const signInSuccessP1 = (data) => {
   user1.user = data.user;
   console.log(user1);
 };
 
-const signInSuccessP2= (data) => {
+const signInSuccessP2 = (data) => {
   user2.user = data.user;
   console.log(data);
 };
 
-const failure = (error) => {
-  console.error(error);
+const failure = (data) => {
+  console.error(data);
 };
 
-const signOutSuccessP1= () => {
+const signOutSuccessP1 = () => {
   console.log(user1.user);
-  user1.user= null;
-  console.log(app , "Signed Out!");
+  user1.user = null;
+  console.log('Signed Out!');
 };
 
-const signOutSuccessP2= () => {
+const signOutSuccessP2 = () => {
   user2.user = null;
-  console.log(app , "Signed Out!");
+  console.log('Signed Out!');
+};
+
+const changePw2Success = (data) => {
+  user2.user = data;
+};
+
+const changePw1Success = (data) => {
+  user1.user = data;
+};
+
+const changePw1Failure = (data) => {
+  console.log(data);
+};
+
+const changePw2Failure = (data) => {
+  console.log(data);
 };
 
 module.exports = {
@@ -40,4 +55,8 @@ module.exports = {
   signOutSuccessP1,
   signInSuccessP2,
   signOutSuccessP2,
+  changePw2Failure,
+  changePw1Failure,
+  changePw1Success,
+  changePw2Success,
 };

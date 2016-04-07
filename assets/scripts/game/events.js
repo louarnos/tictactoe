@@ -18,6 +18,7 @@ const addHandlers = () => {
       }, 1000);
     }
   });
+
   $('#start-game').on('submit', function (event) {
     event.preventDefault();
     createGame.createGame(ui.gameCreationSuccess, ui.gameCreationFailure);
