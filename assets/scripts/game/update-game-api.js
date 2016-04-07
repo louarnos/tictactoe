@@ -3,7 +3,7 @@
 const user1 = require('../auth/user1.js');
 const game = require('./game-data.js');
 
-const updateGame = (success, failure, value, index) => {
+const updateGame = (success, failure, value, index, over) => {
   $.ajax({
     method: 'PATCH',
     url: 'http://tic-tac-toe.wdibos.com/' + 'games/' + game.game.game.id,
@@ -13,6 +13,7 @@ const updateGame = (success, failure, value, index) => {
           "index": index,
           "value": value,
         },
+        "over": over,
       },
     },
     headers: {

@@ -49,7 +49,7 @@ const changePw2Failure = (data) => {
 };
 
 const getStuffSuccess = (data) => {
-  $('.list-of-games').text(data);
+  $('.list-of-games').text(data.games.length);
   console.log(data);
 };
 

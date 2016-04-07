@@ -9,12 +9,12 @@ const ui = require('./ui.js');
 const play = function ($currentBox) {
   if (game.playerOnesTurn) {
     move.makeMoveX($currentBox);
-    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'));
     findWin.findWinOrTie();
+    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'), (!game.inProgress));
   }else if ((!game.playerOnesTurn)) {
     move.makeMoveO($currentBox);
-    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'));
     findWin.findWinOrTie();
+    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'), (!game.inProgress));
   }
 };
 
