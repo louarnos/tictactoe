@@ -308,7 +308,7 @@ webpackJsonp([0],[
 	};
 
 	var getStuffSuccess = function getStuffSuccess(data) {
-	  $('.list-of-games').text(data);
+	  $('.list-of-games').text(data.games.length);
 	  console.log(data);
 	};
 
@@ -468,12 +468,12 @@ webpackJsonp([0],[
 	var play = function play($currentBox) {
 	  if (game.playerOnesTurn) {
 	    move.makeMoveX($currentBox);
-	    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'));
 	    findWin.findWinOrTie();
+	    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'), !game.inProgress);
 	  } else if (!game.playerOnesTurn) {
 	    move.makeMoveO($currentBox);
-	    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'));
 	    findWin.findWinOrTie();
+	    updateApi.updateGame(ui.gameUpdateSuccess, ui.gameUpdateFailure, game.game.game.cells[$currentBox.data('square')], $currentBox.data('square'), !game.inProgress);
 	  }
 	};
 
@@ -586,7 +586,7 @@ webpackJsonp([0],[
 	var user1 = __webpack_require__(6);
 	var game = __webpack_require__(12);
 
-	var updateGame = function updateGame(success, failure, value, index) {
+	var updateGame = function updateGame(success, failure, value, index, over) {
 	  $.ajax({
 	    method: 'PATCH',
 	    url: 'http://tic-tac-toe.wdibos.com/' + 'games/' + game.game.game.id,
@@ -595,7 +595,8 @@ webpackJsonp([0],[
 	        "cell": {
 	          "index": index,
 	          "value": value
-	        }
+	        },
+	        "over": over
 	      }
 	    },
 	    headers: {
