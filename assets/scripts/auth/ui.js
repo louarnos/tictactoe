@@ -33,11 +33,11 @@ const signOutSuccessP2 = () => {
 };
 
 const changePw2Success = (data) => {
-  user2.user = data;
+  console.log(user2.user);
 };
 
 const changePw1Success = (data) => {
-  user1.user = data;
+  console.log(user1.user);
 };
 
 const changePw1Failure = (data) => {
@@ -45,6 +45,15 @@ const changePw1Failure = (data) => {
 };
 
 const changePw2Failure = (data) => {
+  console.log(data);
+};
+
+const getStuffSuccess = (data) => {
+  $('.list-of-games').text(data);
+  console.log(data);
+};
+
+const getStuffFailure = (data) => {
   console.log(data);
 };
 
@@ -59,4 +68,6 @@ module.exports = {
   changePw1Failure,
   changePw1Success,
   changePw2Success,
+  getStuffFailure,
+  getStuffSuccess,
 };

@@ -23,6 +23,15 @@
               <input type="submit" name="submit" value="Sign out!">
             </fieldset>
           </form>
+          <form id="change-pw-1" class="change-pw-1 p1">
+            <fieldset>
+              <legend>Change Password Player 1!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="old password" name="password[old]" value="" placeholder="old password">
+              <input type="new password" name="password[new]" value="" placeholder="new password">
+              <input type="submit" name="submit" value="Change Password!">
+            </fieldset>
+          </form>
           <form id="sign-in-p2" class="sign-in-p2 p2">
             <fieldset>
               <legend>Sign In Player 2!</legend>
@@ -37,24 +46,6 @@
               <input type="submit" name="submit" value="Sign out!">
             </fieldset>
           </form>
-          <form id="sign-up" class="sign-up">
-            <fieldset>
-              <legend>Sign up!</legend>
-              <input type="text" name="credentials[email]" value="" placeholder="email">
-              <input type="password" name="credentials[password]" value="" placeholder="password">
-              <input type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password">
-              <input type="submit" name="submit" value="Sign up!">
-            </fieldset>
-          </form>
-          <form id="change-pw-1" class="change-pw-1 p1">
-            <fieldset>
-              <legend>Change Password Player 1!</legend>
-              <input type="text" name="credentials[email]" value="" placeholder="email">
-              <input type="old password" name="password[old]" value="" placeholder="old password">
-              <input type="new password" name="password[new]" value="" placeholder="new password">
-              <input type="submit" name="submit" value="Change Password!">
-            </fieldset>
-          </form>
           <form id="change-pw-2" class="change-pw-2 p2">
             <fieldset>
               <legend>Change Password Player 2!</legend>
@@ -62,6 +53,15 @@
               <input type="old password" name="password[old]" value="" placeholder="old password">
               <input type="new password" name="password[new]" value="" placeholder="new password">
               <input type="submit" name="submit" value="Change Password!">
+            </fieldset>
+          </form>
+          <form id="sign-up" class="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <input type="text" name="credentials[email]" value="" placeholder="email">
+              <input type="password" name="credentials[password]" value="" placeholder="password">
+              <input type="password" name="credentials[password_confirmation]" value="" placeholder="confirm password">
+              <input type="submit" name="submit" value="Sign up!">
             </fieldset>
           </form>
           <form id="start-game">
@@ -94,6 +94,16 @@
             <div class ="21 box" data-square="7"><p></p></div>
             <div class ="22 box" data-square="8"><p></p></div>
           </div>
+        </div>
+        <div class="score-div">
+          <h2 class ="score-title">Score</h2>
+          <p class="score-p1">Player 1: 0</p>
+          <p class="score-p2">Player 2: 0</p>
+        </div>
+        <form id="get-user-games">
+          <input type="submit" class="get-user-games" value="Get Your Games!">
+          <p class="list-of-games"></p>
+        </form>
         </div>
       </div>
     </body>

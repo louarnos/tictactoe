@@ -1,6 +1,8 @@
 'use strict';
 
 const game = require('./game-data.js');
+const user1 = require('../auth/user1.js');
+const user2 = require('../auth/user2.js');
 
 const findWinOrTie = function () {
   let win = false;
@@ -35,13 +37,23 @@ const findWinOrTie = function () {
   }
 
   if (win) {
-    $('.title').text(' ' + winner + ' Wins!!!');
-    console.log(winner + ' wins!!!');
-  }else if (tie) {
-    $('.title').text('Its a Tie!!!');
-    console.log('Its a tie!!!');
-  }
+    $('.title').text(' ' + winner + ' Wins!!!!!');
+    game.inProgress = false;
+    game.moveCount = 0;
+    if (winner === 'x') {
+      user1.wins += 1;
+      console.log(user1.wins, user2.wins);
+    }else {
+      user2.wins += 1;
+    }
 
+    $('.score-p1').text('Player 1: ' + user1.wins);
+    $('.score-p2').text('Player 2: ' + user2.wins);
+  }else if (tie) {
+    $('.title').text('Its a Tie!');
+    game.inProgress = false;
+    game.moveCount = 0;
+  }
 };
 
 module.exports = {

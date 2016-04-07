@@ -13,6 +13,7 @@ body {
   animation-iteration-count: infinite;
   animation-name: example;
   font-family: monospace;
+  font-style: bold;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -26,6 +27,19 @@ h3 {
 
 legend {
   font-size: 2em;
+  border: 5px #F4F4F4;
+  border-style: outset;
+}
+
+form {
+  padding-bottom: 2%;
+  padding-top: 1%;
+  width: 35%;
+}
+
+input {
+  padding-bottom: .5%;
+  padding-top: .5%;
 }
 
 .page {
@@ -53,6 +67,7 @@ legend {
 .sign-up {
   clear: both;
 }
+
 .sign-out-p1 {
   display: none;
 }
@@ -61,7 +76,7 @@ legend {
   display: none;
 }
 
-.change-pw-1{
+.change-pw-1 {
   display: none;
 }
 
@@ -70,12 +85,13 @@ legend {
 }
 
 .title {
-  background: rgb(225, 225, 225);
-  border: 5px solid black;
+  background: rgba(225, 225, 225, 0.5);
+  border: 5px #F4F4F4;
+  border-style: outset;
   border-radius: 25px;
   clear: both;
   font-family: monospace;
-  font-size: 4.5em;
+  font-size: 4em;
   margin-left: 34%;
   margin-right: 34%;
   // padding-top: 5%;
@@ -87,6 +103,8 @@ legend {
   width: 33%;
   margin-top: 50px;
   margin-left: 33.5%;
+  box-sizing: inherit;
+  line-height: 1;
 }
 
 .box {
@@ -96,6 +114,7 @@ legend {
   width: 33%;
   height: auto;
   padding-bottom: 10%;
+  line-height: 1;
 }
 
 .marked {
@@ -107,53 +126,87 @@ legend {
   display: flex;
   height: 33%;
   width: 100%;
+  box-sizing: inherit;
+  line-height: 1;
 }
 
 .row2 {
   display: flex;
   height: 33%;
   width: 100%;
+  box-sizing: inherit;
+  line-height: 1;
 }
 
 .row3 {
   display: flex;
   height: 33%;
   width: 100%;
+  box-sizing: inherit;
 }
 
 .box1 {
   border-left: 0;
   border-top: 0;
+  box-sizing: inherit;
+  line-height: 1;
 }
 
 .box2 {
   border-top: 0;
+  line-height: 1;
 }
 
 .box3 {
   border-right: 0;
   border-top: 0;
+  line-height: 1;
 }
 
 .box4 {
   border-left: 0;
+  line-height: 1;
 }
 
 
 .box6 {
   border-right: 0;
+  line-height: 1;
 }
 
 .box7 {
   border-bottom: 0;
   border-left: 0;
+  line-height: 1;
 }
 
 .box8 {
   border-bottom: 0;
+  line-height: 1;
 }
 
 .box9 {
   border-bottom: 0;
   border-right: 0;
+  line-height: 1;
+}
+
+.score-p1 {
+  font-size: 2em;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+
+.score-p2 {
+  font-size: 2em;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+
+
+.score-title {
+  visibility: visible;
+  text-decoration: underline;
+  margin-left: 47%;
+  margin-right: 47%;
 }

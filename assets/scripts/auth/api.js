@@ -84,6 +84,18 @@ const changePw1 = (success, failure, data) => {
   .fail(failure);
 };
 
+const getStuff = (success, failure, data) => {
+  $.ajax({
+    method: 'GET',
+    url: 'http://tic-tac-toe.wdibos.com/' + 'games/',
+    headers: {
+      Authorization: 'Token token=' + user1.user.token,
+    },
+  })
+  .done(success)
+  .fail(failure);
+};
+
 module.exports = {
   signUp,
   signIn,
@@ -91,4 +103,5 @@ module.exports = {
   signOutP2,
   changePw1,
   changePw2,
+  getStuff,
 };
